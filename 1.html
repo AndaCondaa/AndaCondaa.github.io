@@ -3,20 +3,63 @@
 <head>
     <title>Simon's First Page - 1.Me</title>
     <meta charest="utf-8">
+    <style>
+        a {
+            color: green;
+            text-decoration: none;
+        } 
+        h1 {
+            font-style: italic;
+            font-size: 60px;
+            text-align: center;
+            background-image: url("img/main_bg.jpg");
+            background-size: 50%;
+            padding: 120px;
+            margin: 20px;
+        }
+
+        #active {
+            color:red;
+        }
+        #grid {
+            border-top: 2px solid gray; 
+            display: grid;
+            grid-template-columns: 1fr 4fr;
+        }
+        #grid h2 {
+            margin-top: 0;
+        }
+        #grid #article {
+            margin: 0;
+        }
+        #grid ol {
+            border-right: 1px solid gray;
+            width: 100px;
+            margin: 0;
+            padding: 33px;
+        }
+        body {
+            margin: 0;
+        }
+    </style>
 </head>
 
 <body>
     <h1><a href="index.html">Simon's Page</a></h1>
-    <ol>
-        <li><a href="1.html" target="_self">Me</a></li>
-        <li><a href="2.html">Study</a></li>
-        <li><a href="3.html">Hobby</a></li>
-    </ol>
+    <div id="grid">
+        <ol>
+            <li><a href="1.html" id="active">Me</a></li>
+            <li><a href="2.html">Study</a></li>
+            <li><a href="3.html">Hobby</a></li>
+        </ol>
+        <div id="article">
+            <p style="margin-top:20px">
+            <h2>1.Me</h2>
+            I'm Simon<br>
+            <img src="img/1.jpg" width="30%">    
+            </p>
+        </div>
+    </div>
     
-    <p style="margin-top:50px">
-    <h2>1.Me</h2>
-    I'm Simon<br>
-    </p>
-    <img src="img/1.jpg" width="30%">
 </body>
 </html>
