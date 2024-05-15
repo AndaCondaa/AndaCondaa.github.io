@@ -5,7 +5,7 @@
     <meta charest="utf-8">
     <style>
         a {
-            color:green;
+            color: black;
             text-decoration: none;
         } 
         h1 {
@@ -15,18 +15,21 @@
             background-image: url("img/main_bg.jpg");
             background-size: 100%;
         }
+        .saw {
+            color:gray;
+        }
+        #active {
+            color:red;
+        }
     </style>
 </head>
 
 <body>
-    <h1><a href="index.html"
-            style="color:gold;">Simon's Page</a></h1>
+    <h1><a href="index.html">Simon's Page</a></h1>
     <ol>
-        <li><a href="1.html">Me</a></li>
-        <li><a href="2.html" 
-            style="color:red;
-                    text-decoration: underline;">Study</a></li>
-        <li><a href="3.html">Hobby</a></li>
+        <strong><li><a href="1.html" class="saw">Me</a></li></strong>
+        <strong><li><a href="2.html" class="saw" id="active">Study</a></li></strong>
+        <strong><li><a href="3.html">Hobby</a></li></strong>
     </ol>
     
     <p style="margin-top:50px">
