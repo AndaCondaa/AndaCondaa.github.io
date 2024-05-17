@@ -1,0 +1,49 @@
+a {
+    color: green;
+    text-decoration: none;
+} 
+h1 {
+    font-style: italic;
+    font-size: 60px;
+    text-align: center;
+    background-image: url("img/main_bg.jpg");
+    background-size: 50%;
+    padding: 120px;
+    margin: 20px;
+}
+
+#active {
+    color:red;
+}
+#grid {
+    border-top: 2px solid gray; 
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+#grid h2 {
+    margin-top: 0;
+}
+#grid #article {
+    margin: 0;
+}
+ol {
+    border-right: 1px solid gray;
+    width: 100px;
+    margin: 0;
+    padding: 33px;
+}
+body {
+    margin: 0;
+}
+@media(max-width:800px) {
+    #grid {
+        display:block;
+        text-align:left;
+    }
+    #grid ol {
+        border-right:none;
+        width:100px;
+        margin:0;
+        padding:33px;
+    }
+}
