@@ -1,7 +1,11 @@
-a {
+#title_main {
     color: green;
     text-decoration: none;
 } 
+a {
+    color:blue;
+    font-weight: bold;
+}
 h1 {
     font-style: italic;
     font-size: 60px;

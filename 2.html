@@ -4,10 +4,20 @@
     <title>Simon's First Page - 2.Study</title>
     <meta charest="utf-8">
     <link rel="stylesheet" href="style.css">
+    <script src="colors.js"></script>
+    <script src="clock.js"></script>
 </head>
 
 <body>
-    <h1><a href="index.html">Simon's Page</a></h1>
+    <h1><a href="index.html" id="title_main">Simon's Page</a></h1>
+    <div id="clock">
+        <script>updateClock();</script>
+    </div>
+    <div id="theme_button">
+        <input type="button" value="night" onclick="
+            nightDayHandler(this);
+            ">
+    </div>
     <div id="grid">
         <ol>
             <li><a href="1.html">Me</a></li>

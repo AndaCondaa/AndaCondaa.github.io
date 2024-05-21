@@ -1,56 +1,30 @@
 <!doctype html>
 <html>
+
 <head>
     <title>Simon's First Page</title>
     <meta charest="utf-8">
     <link rel="stylesheet" href="style.css">
+    <script src="colors.js"></script>
+    <script src="clock.js"></script>
 </head>
 
 <body>
-    <h1><a href="index.html">Simon's Page</a></h1>
-
+    <h1><a href="index.html" id="title_main">Simon's Page</a></h1>
     <div id="clock">
-        <script>
-            function updateClock() {
-                const now = new Date();
-                const year = now.getFullYear();
-                const month = (now.getMonth() + 1).toString().padStart(2, '0');
-                const day = now.getDate().toString().padStart(2, '0');
-                const hours = now.getHours();
-                const minutes = now.getMinutes().toString().padStart(2, '0');
-                const seconds = now.getSeconds().toString().padStart(2, '0');
-    
-                const dateString = `${year}-${month}-${day}`;
-                const timeString = `${hours}:${minutes}:${seconds}`;
-                const fullString = `${dateString} ${timeString}`;
-                document.getElementById('clock').textContent = fullString;
-            }
-
-            setInterval(updateClock, 1000);
-            updateClock();
-        </script> 
+        <script>updateClock();</script>
     </div>
     <div id="theme_button">
         <input type="button" value="night" onclick="
-            var bodyTagStyle = document.querySelector('body').style;
-            if (this.value === 'night')
-            {
-                bodyTagStyle.backgroundColor='black';
-                bodyTagStyle.color='white';
-                this.value = 'day';
-            } else {
-                bodyTagStyle.backgroundColor='white';
-                bodyTagStyle.color='black';
-                this.value = 'night';
-            }
+            nightDayHandler(this);
             ">
     </div>
     <div id="grid">
         <ol>
-                <li><a href="1.html">Me</a></li>
-                <li><a href="2.html">Study</a></li>
-                <li><a href="3.html">Hobby</a></li>
-        </ol>        
+            <li><a href="1.html">Me</a></li>
+            <li><a href="2.html">Study</a></li>
+            <li><a href="3.html">Hobby</a></li>
+        </ol>
 
         <div id="article">
             <p style="margin-top:20px">
@@ -60,8 +34,9 @@
             Thx!<br>
             <img src="img/main.jpg" width="30%">
             </p>
-            
+
         </div>
     </div>
 </body>
+
 </html>
