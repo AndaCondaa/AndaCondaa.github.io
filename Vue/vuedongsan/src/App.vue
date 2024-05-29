@@ -61,8 +61,7 @@ export default {
   },
   methods: {
     increase(i) {
-      console.log("@@@");
-      this.product[i].report++;
+      this.products[i].report++;
     },
   },
   components: {},
