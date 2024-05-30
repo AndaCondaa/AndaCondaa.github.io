@@ -44,6 +44,10 @@ div {
     position: relative;
 }
 
+.detail-title {
+  display : inline;
+}
+
 .button-report {
   align-items: center;
   background-color: #FFFFFF;
@@ -92,4 +96,11 @@ div {
   box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
   color: rgba(0, 0, 0, 0.65);
   transform: translateY(0);
+}
+
+.discount {
+  background: #eee;
+  padding: 10px;
+  margin : 10px;
+  border-radius: 5px;
 }
