@@ -4,46 +4,23 @@
     <a v-for="el in menu_name" :key="el">{{ el }}</a>
   </div>
 
-  <Discount />
+  <DiscountComponent />
 
-  <div v-for="(el, i) in products" :key="el">
-    <img v-bind:src="el.image" class="room-img" />
-    <h4
-      @click="
-        this.detail_state = true;
-        this.detail_page = i;
-      "
-      :style="product_text_color"
-    >
-      {{ el.title }}
-    </h4>
-    <p>{{ el.price }} 만원</p>
-    <button @click="increase(i)" class="button-report">허위매물신고</button>
-    <span>신고수 :{{ el.report }}</span>
-  </div>
+  <Modal
+    :products="products"
+    :detail_page="detail_page"
+    :detail_state="detail_state"
+  />
 
-  <div class="black-bg" v-if="detail_state == true">
-    <div class="white-bg">
-      <h4 style="display: inline">{{ products[detail_page].title }}</h4>
-      <button
-        style="display: inline; position: absolute; right: 20px"
-        @click="this.detail_state = false"
-      >
-        닫기
-      </button>
-      <p>
-        {{ products[detail_page].title }}의 가격은
-        {{ products[detail_page].price }} 만원입니다.<br />
-        {{ products[detail_page].content }} 허위매물신고 건수는
-        {{ products[detail_page].report }}입니다.
-      </p>
-    </div>
-  </div>
+  <Card :products="products" :product_text_color="product_text_color"/>
 </template>
 
 // JS
 <script>
 import data from "./assets/data.js";
+import DiscountComponent from "./components/DiscountComponent.vue";
+import Modal from "./components/Modal.vue";
+import Card from "./components/Card.vue";
 
 export default {
   name: "App",
@@ -61,7 +38,11 @@ export default {
       this.products[i].report++;
     },
   },
-  components: {},
+  components: {
+    DiscountComponent: DiscountComponent,
+    Modal,
+    Card,
+  },
 };
 </script>
 
