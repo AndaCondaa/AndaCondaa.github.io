@@ -97,10 +97,3 @@ div {
   color: rgba(0, 0, 0, 0.65);
   transform: translateY(0);
 }
-
-.discount {
-  background: #eee;
-  padding: 10px;
-  margin : 10px;
-  border-radius: 5px;
-}

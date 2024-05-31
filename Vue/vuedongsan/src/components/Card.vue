@@ -11,7 +11,7 @@
       {{ el.title }}
     </h4>
     <p>{{ el.price }} 만원</p>
-    <button @click="increase(i)" class="button-report">허위매물신고</button>
+    <!-- <button @click="increase(i)" class="button-report">허위매물신고</button> -->
     <span>신고수 :{{ el.report }}</span>
   </div>
 </template>
