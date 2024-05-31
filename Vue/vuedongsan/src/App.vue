@@ -11,8 +11,9 @@
     :detail_page="detail_page"
     :detail_state="detail_state"
   />
-
-  <Card :products="products" :product_text_color="product_text_color"/>
+  
+    <Card :product="element" :product_text_color="product_text_color" v-for="element in products" :key="element"/>
+  
 </template>
 
 // JS
