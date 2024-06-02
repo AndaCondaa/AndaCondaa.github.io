@@ -7,13 +7,19 @@
   <DiscountComponent />
 
   <Modal
+    @closeModal="detail_state = false;"
     :products="products"
     :detail_page="detail_page"
     :detail_state="detail_state"
   />
-  
-    <Card :product="element" :product_text_color="product_text_color" v-for="element in products" :key="element"/>
-  
+
+  <Card
+    @openModal="detail_state = true; detail_page = $event"
+    :product="element"
+    :product_text_color="product_text_color"
+    v-for="element in products"
+    :key="element"
+  />
 </template>
 
 // JS
