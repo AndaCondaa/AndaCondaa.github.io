@@ -6,7 +6,7 @@
         style="display: inline; position: absolute; right: 20px"
         @click="$emit('closeModal')"
       >
-        닫기
+        창 닫기
       </button>
       <p>
         {{ products[detail_page].title }}의 가격은
