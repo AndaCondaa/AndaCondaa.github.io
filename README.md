@@ -1,3 +1,3 @@
 <h1> WebSite</h1>
 
-https://andacondaa.github.io/WebSite
+https://andacondaa.github.io/
