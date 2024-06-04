@@ -1,6 +1,5 @@
 // HTML
 <template>
-  ㄴ어라ㅣ먼ㅇ라ㅣㅓㅁ나ㅣㅇㄹ
   <div class="menu">
     <a v-for="el in menu_name" :key="el">{{ el }}</a>
   </div>

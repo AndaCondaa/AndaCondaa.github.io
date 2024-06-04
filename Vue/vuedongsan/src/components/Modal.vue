@@ -6,7 +6,7 @@
         style="display: inline; position: absolute; right: 20px"
         @click="$emit('closeModal')"
       >
-        창 닫기
+        닫기
       </button>
       <p>
         {{ products[detail_page].title }}의 가격은
@@ -28,6 +28,19 @@ export default {
     return {
       month: 12,
     };
+  },
+  watch : {
+    month(input, predata){
+      if (input > 12) {
+        alert("12개월 이상 입력 금지.");
+        this.month = predata;
+      } else if (isNaN(input) == true) {
+        if (input != " ") {
+          alert("문자 입력 금지.");
+          this.month = predata;
+        }
+      }
+    }
   },
   props: {
     products: Array,
